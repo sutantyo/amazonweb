@@ -65,11 +65,11 @@ app.get('/u/:id', function(req,res){
 	var query_string = "SELECT level, staffid, woshall, woshiris, wosh1115, scopush1115, googleh, googlecites, altmetric,";
 	query_string += " jcrq1, jcrq2, sjrq1, sjrq2, Person_Name, dept, approved, rejected, A1, B1, C1, E1 ";
 	query_string += " FROM fohs_combined WHERE staffid = " + parseInt(req.params.id);
-	
+
 	//client.query("SELECT level, staffid, woshall, woshiris, wosh1115, scopush1115, googleh, googlecites, altmetric, jcrq1 FROM fohs_combined WHERE Person_Name <> ''", function(err,result){
 	client.query(query_string, function(err,result){
 		console.log('query');
-	
+
 
 		//call `done()` to release the client back to the pool
 		done();

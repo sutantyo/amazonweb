@@ -8,3 +8,7 @@ node_modules
 
 # private
 private
+
+# react 
+bundle.js
+bundle.js.map
